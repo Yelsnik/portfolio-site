@@ -80,7 +80,7 @@ const trackingInventory = {
   name: "Tracking Inventory API",
   description:
     "I built an API that helps users track the kind of product they purchase. Keeping in mind the brand, and price of the product.",
-  techStacks: ["Golang", "Docker", "PostgresSQL"],
+  techStacks: ["Golang", "Docker", "Postgres"],
   githubLink: "https://github.com/Yelsnik/Scalable-Ecommerce-API",
   image: "./trackinginventory.png",
   alt: "trackinginventory",
