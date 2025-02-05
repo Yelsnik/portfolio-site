@@ -122,3 +122,48 @@ projects.forEach((project) => {
     projectcontainer.insertAdjacentHTML("beforeend", html);
   }
 });
+
+// article section
+const articlecontainer = document.getElementById("articlecontainer");
+
+const nestjsarticle = {
+  name: "How to Add Filtering, Sorting, Limiting, and Pagination to Your Nest.js App",
+  description:
+    "The article shows the user how to add nice features such as sorting, filtering and pagination to a NestJS API",
+  articleLink:
+    "https://www.freecodecamp.org/news/how-to-add-filtering-sorting-limiting-pagination-to-nestjs-app/",
+  articleImage: "./nestjs-app-image.png",
+};
+
+const nodemailerarticle = {
+  name: "How to Send Emails With Nodemailer in NestJS",
+  description:
+    "Sending emails in nodejs is quite simple. This article shows how to send emails with a package called nodemailer",
+  articleLink:
+    "https://www.freecodecamp.org/news/how-to-use-nodemailer-in-nestjs/",
+  articleImage: "./email.jpg",
+};
+
+const crudarticle = {
+  name: "CRUD operations with mongoose models: a step-by-step guide",
+  description:
+    "This article shows how to perform CRUD operations like, create, read update and delete with mongoose models",
+  articleLink:
+    "https://dev.to/itzz_okure/crud-operations-with-mongoose-models-a-step-by-step-guide-o77",
+  articleImage: "crud-mongo.jpg",
+};
+
+const articles = [nestjsarticle, nodemailerarticle, crudarticle];
+
+articles.forEach((article) => {
+  const html = `
+        <a href=${article.articleLink} target="_blank" class="transition duration-700 ease-in-out hover:-translate-y-1 hover:scale-90 text-white py-5 dark:bg-green-950 rounded-md border border-gray-600 shadow-md hover:shadow-xl mx-auto px-6 sm:px-8 grid items-center ">
+                <img src=${article.articleImage} alt="nestjs article" class="w-full rounded-lg">
+                <h1 class="text-2xl font-crete mt-4">${article.name}</h1>
+                <p class="py-5 font-crete text-gray-300">${article.description}</p>
+          </a>`;
+
+  if (articlecontainer) {
+    articlecontainer.insertAdjacentHTML("beforeend", html);
+  }
+});
