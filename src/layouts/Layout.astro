@@ -1,14 +1,35 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import 'aos/dist/aos.css';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
+		<ClientRouter/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Astro Basics</title>	
 	</head>
-	<body>
+	<body class="dark:bg-emerald-950 font-sans">
 		<slot />
+
+		<script>
+			import {aosInit} from '../scripts/aos.js'
+
+			aosInit()
+
+			document.addEventListener("astro:after-swap", aosInit)
+			
+		</script>
 	</body>
 </html>
 
@@ -19,4 +40,10 @@
 		width: 100%;
 		height: 100%;
 	}
+
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
 </style>
