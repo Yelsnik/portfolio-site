@@ -153,7 +153,34 @@ const crudarticle = {
   articleImage: "crud-mongo.jpg",
 };
 
-const articles = [nestjsarticle, nodemailerarticle, crudarticle];
+const goArticle = {
+  name: "How to Create Database Migrations in Go Using Docker and Postgres",
+  description:
+    "It is important to make changes to your database in a timely manner. The best way to do that is with database migrations. This article dives deep into that",
+  articleLink:
+    "https://www.freecodecamp.org/news/how-to-create-database-migrations-in-go/",
+  articleImage: "go-migrate.jpg",
+}
+
+const asynNodejs = {
+  name: "UNDERSTANDING THE ASYNCHRONOUS NATURE OF NODE.JS",
+  description:
+    "The article helps the reader understand asynchronous programming in nodejs",
+  articleLink:
+    "https://dev.to/itzz_okure/understanding-the-asynchronous-nature-of-nodejs-3blg",
+  articleImage: "./async.jpg",
+}
+
+const propagationArticle = {
+  name: "How Event Propagation and Delegation Work in JavaScript",
+  description:
+    "In this article, you will learn how event propagation and delegation work in JavaScript and how to effectively use them to handle events on your page.",
+  articleLink:
+    "https://dev.to/itzz_okure/how-event-propagation-and-delegation-work-in-javascript-5efe",
+  articleImage: "./propagation.jpg",
+}
+
+const articles = [goArticle, nestjsarticle, nodemailerarticle, crudarticle, asynNodejs, propagationArticle];
 
 articles.forEach((article) => {
   const html = `
