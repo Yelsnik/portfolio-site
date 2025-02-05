@@ -160,7 +160,7 @@ const goArticle = {
   articleLink:
     "https://www.freecodecamp.org/news/how-to-create-database-migrations-in-go/",
   articleImage: "go-migrate.jpg",
-}
+};
 
 const asynNodejs = {
   name: "UNDERSTANDING THE ASYNCHRONOUS NATURE OF NODE.JS",
@@ -169,7 +169,7 @@ const asynNodejs = {
   articleLink:
     "https://dev.to/itzz_okure/understanding-the-asynchronous-nature-of-nodejs-3blg",
   articleImage: "./async.jpg",
-}
+};
 
 const propagationArticle = {
   name: "How Event Propagation and Delegation Work in JavaScript",
@@ -178,9 +178,16 @@ const propagationArticle = {
   articleLink:
     "https://dev.to/itzz_okure/how-event-propagation-and-delegation-work-in-javascript-5efe",
   articleImage: "./propagation.jpg",
-}
+};
 
-const articles = [goArticle, nestjsarticle, nodemailerarticle, crudarticle, asynNodejs, propagationArticle];
+const articles = [
+  goArticle,
+  nestjsarticle,
+  nodemailerarticle,
+  crudarticle,
+  asynNodejs,
+  propagationArticle,
+];
 
 articles.forEach((article) => {
   const html = `
@@ -192,5 +199,37 @@ articles.forEach((article) => {
 
   if (articlecontainer) {
     articlecontainer.insertAdjacentHTML("beforeend", html);
+  }
+});
+
+// skills and tech stacks
+
+const techstacks = document.getElementById("techstacks");
+
+const technologies = [
+  "Golang",
+  "NestJS",
+  "Docker",
+  "AWS",
+  "Typescript",
+  "Solana",
+  "Python",
+  "Technical Writing",
+  "Angular",
+  "React",
+  "gRPC",
+  "Microservice",
+];
+
+technologies.forEach((tech) => {
+  const html = `
+  <div  class="transition duration-700 ease-in-out hover:-translate-y-1 hover:scale-100 text-white py-4 dark:bg-green-950 rounded-md border border-gray-600 shadow-md hover:shadow-xl  px-6 sm:px-8 grid items-center ">
+            <h1 class="text-2xl font-crete">${tech}</h1>
+        </div>
+  
+  `;
+
+  if (techstacks) {
+    techstacks.insertAdjacentHTML("beforeend", html);
   }
 });
