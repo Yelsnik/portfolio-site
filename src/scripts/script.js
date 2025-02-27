@@ -86,7 +86,25 @@ const trackingInventory = {
   alt: "trackinginventory",
 };
 
-const projects = [ecommerce, trackingInventory];
+const productReview = {
+  name: "Product Review API",
+  description:
+    "This API analyzes products reviews with NLP, ranks them using Redis, and stores data in SQL. It enables real-time sentiment-based leaderboards with gRPC communication for efficiency. ",
+  techStacks: [
+    "Golang",
+    "NestJS",
+    "Python",
+    "Docker",
+    "Redis",
+    "Postgres",
+    "gRPC",
+  ],
+  githubLink: "https://github.com/Yelsnik/Product-Review-API",
+  image: "./product-review.png",
+  alt: "product review api",
+};
+
+const projects = [ecommerce, trackingInventory, productReview];
 
 projects.forEach((project) => {
   const techStackHTML = project.techStacks
